@@ -1,0 +1,343 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #171717;
+    background: #f5f2ed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    background: #f5f2ed;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.nav a {
+    transition: transform 0.2s ease;
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #f5f2ed;
+}
+
+.hero__contenido {
+    flex: 1;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    font-size: clamp(2.8rem, 9vw, 6rem);
+    line-height: 0.95;
+}
+
+.hero p {
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 24px;
+    background: #171717;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.25s ease;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   VISUAL DEL EVENTO
+========================= */
+
+.hero__visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evento-card {
+    width: 100%;
+    max-width: 430px;
+    min-height: 300px;
+    padding: 35px;
+    border-radius: 25px;
+    background: #171717;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.evento-card strong {
+    margin: 15px 0;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+
+/* =========================
+   EXPERIENCIAS - GRID
+========================= */
+
+.experiencias {
+    width: 100%;
+    padding: 70px 20px;
+}
+
+.seccion-titulo {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.seccion-titulo h2,
+.artistas h2,
+.cta h2 {
+    margin: 15px 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+
+/* CSS GRID */
+
+.experiencias__grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+    gap: 24px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    min-height: 270px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.numero {
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin-top: 45px;
+}
+
+.tarjeta p {
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.tarjeta a {
+    font-weight: bold;
+}
+
+
+/* =========================
+   ARTISTAS
+========================= */
+
+.artistas {
+    width: 100%;
+    padding: 65px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    background: #171717;
+    color: white;
+}
+
+.artistas__contenido {
+    flex: 1;
+}
+
+.artistas p {
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.artista-dato {
+    flex: 0 1 300px;
+
+    padding: 30px;
+
+    border: 1px solid white;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.artista-dato strong {
+    font-size: 4rem;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    width: 100%;
+    padding: 65px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    background: #d8ff00;
+}
+
+.boton--claro {
+    background: #171717;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background: #f5f2ed;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (min-width: 768px) {
+
+    .header {
+        padding: 24px 5%;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero {
+        padding: 90px 8%;
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .artistas {
+        padding: 70px 8%;
+
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .cta {
+        padding: 70px 8%;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer {
+        padding: 25px 5%;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
